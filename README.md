@@ -8,4 +8,4 @@ Lahari sudhini 11704890</br>
 Suharsha Tungala - 11712686</br>
 Teja Vaishnavi Godavarthi - 11712897</br>
 Bandaru Sai Sri surya -11659350</br>
-Sreeja Ulligadda - 11721337</br>
+Sreeja Ulligadda - 11721337 (Scrum Master)</br>
