@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEDZ - Plan Your Dream Wedding</title>
+    <style>
+        /* Styling - simple for demo purposes */
+        
+
+        body {
+            background-color: #0c6c0a;
+            font-family: Arial, sans-serif;
+        }
+
+        header, section, footer {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        header {
+            background-color: #4a90e2;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: large ;
+            
+        }
+
+        section {
+            background-color: rgb(231, 235, 240);
+        }
+
+        button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>WEDZ</h1>
+    <p>Planning a wedding wasn't as simple as falling in love.</p>
+</header>
+
+<!-- 1. Set Up User Profile -->
+<section id="set-up-user-profile">
+    <h2>Set Up User Profile</h2>
+    <form action="/backend-api/profile" method="POST">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname"><br><br>
+
+        <label for="partnername">Partner's Name:</label>
+        <input type="text" id="partnername" name="partnername"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <button type="submit">Save Profile</button>
+    </form>
+</section>
+
+<!-- 2. Send Digital Invitations -->
+<section id="send-digital-invitations">
+    <h2>Send Digital Invitations</h2>
+    <form action="/backend-api/invitations" method="POST">
+        <label for="guestemail">Guest Email:</label>
+        <input type="email" id="guestemail" name="guestemail"><br><br>
+
+        <label for="invitationMessage">Invitation Message:</label>
+        <textarea id="invitationMessage" name="invitationMessage"></textarea><br><br>
+
+        <button type="submit">Send Invitation</button>
+    </form>
+</section>
+
+<!-- 3. Customize Wedding Food Menu -->
+<section id="customize-wedding-food-menu">
+    <h2>Customize Wedding Food Menu</h2>
+    <form action="/backend-api/food-menu" method="POST">
+        <label for="starter">Starter:</label>
+        <input type="text" id="starter" name="starter" placeholder="E.g. Caesar Salad"><br><br>
+
+        <label for="mainCourse">Main Course:</label>
+        <input type="text" id="mainCourse" name="mainCourse" placeholder="E.g. Grilled Chicken Breast"><br><br>
+
+        <label for="dessert">Dessert:</label>
+        <input type="text" id="dessert" name="dessert" placeholder="E.g. Chocolate Lava Cake"><br><br>
+
+        <button type="submit">Save Menu</button>
+    </form>
+</section>
+
+<!-- 4. Budget Tracking -->
+<section id="budget-tracking">
+    <h2>Budget Tracking</h2>
+    <form action="/backend-api/budget" method="POST">
+        <label for="totalBudget">Total Budget:</label>
+        <input type="number" id="totalBudget" name="totalBudget" placeholder="E.g. 10000"><br><br>
+
+        <label for="spentSoFar">Spent So Far:</label>
+        <input type="number" id="spentSoFar" name="spentSoFar" placeholder="E.g. 5000"><br><br>
+
+        <button type="submit">Update Budget</button>
+    </form>
+</section>
+
+<!-- 5. Wedding Timer -->
+<section id="wedding-timer-function">
+    <h2>Wedding Timer</h2>
+    <p>Countdown to your big day!</p>
+    <button onclick="startTimer()">Start Countdown</button>
+    <div id="timerDisplay"></div>
+</section>
+
+<!-- 6. Theme Selection -->
+<section id="theme-selection">
+    <h2>Select Your Wedding Theme</h2>
+    <form action="/backend-api/theme" method="POST">
+        <label for="theme">Choose Theme:</label>
+        <select id="theme" name="theme">
+            <option value="classic">Classic</option>
+            <option value="boho">Boho</option>
+            <option value="beach">Beach</option>
+            <!-- ... other themes ... -->
+        </select><br><br>
+        <button type="submit">Select Theme</button>
+    </form>
+</section>
+
+<!-- 7. Feedback Mechanism -->
+<section id="feedback-mechanism">
+    <h2>Feedback Mechanism</h2>
+    <form action="/backend-api/feedback" method="POST">
+        <label for="feedbackMessage">Your Feedback:</label>
+        <textarea id="feedbackMessage" name="feedbackMessage"></textarea><br><br>
+        <button type="submit">Submit Feedback</button>
+    </form>
+</section>
+
+<!-- 8. Venue Search -->
+<section id="wedding-venue-search">
+    <h2>Wedding Venue Search</h2>
+    <form action="/backend-api/venue-search" method="POST">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter location"><br><br>
+
+        <label for="budget">Budget:</label>
+        <input type="number" id="budget" name="budget" placeholder="E.g. 5000"><br><br>
+
+        <button type="submit">Search Venues</button>
+    </form>
+</section>
+
+<!-- 9. Wedding Insurance Options -->
+<section id="wedding-insurance-options">
+    <h2>Wedding Insurance Options</h2>
+    <form action="/backend-api/insurance-options" method="POST">
+        <label for="insuranceOption">Choose Insurance Option:</label>
+        <select id="insuranceOption" name="insuranceOption">
+            <option value="basic">Basic</option>
+            <option value="premium">Premium</option>
+            <option value="custom">Custom</option>
+        </select><br><br>
+        <button type="submit">Select Insurance</button>
+    </form>
+</section>
+
+<!-- 10. Payment System Integration -->
+<section id="payment-system-integration">
+    <h2>Payment System Integration</h2>
+    <form action="/backend-api/payment" method="POST">
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number"><br><br>
+
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY"><br><br>
+
+        <label for="cvc">CVC:</label>
+        <input type="text" id="cvc" name="cvc" placeholder="Enter CVC"><br><br>
+
+        <button type="submit">Proceed to Payment</button>
+    </form>
+</section>
+
+<footer>
+    Need help? Reach out to our <a href="#support">customer support</a>.
+    <p>© 2023 WEDZ. All rights reserved.</p>
+</footer>
+
+<!-- Placeholder for JavaScript interactions -->
+<script>
+    // ... (JavaScript remains unchanged) ...
+</script>
+</body>
+
+</html>
+
