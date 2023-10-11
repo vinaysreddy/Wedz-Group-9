@@ -1,0 +1,18 @@
+/* Define your styles here, for instance: */
+.themes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.theme-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.theme-card img {
+    max-width: 100%;
+    height: auto;
+}
