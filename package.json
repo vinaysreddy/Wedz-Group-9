@@ -1,0 +1,17 @@
+{
+  "name": "wedz",
+  "version": "1.0.0",
+  "description": "(1).D Vinay Sekhar Reddy - 11712752",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  }
+}
