@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Wedding Planner</title>
+</head>
+<body>
+    <h1>Send an Invitation</h1>
+    <p>Compose and send an email invitation to your guests.</p>
+    
+    <form action="send_invitation.php" method="post">
+        <label for="recipientEmail">Recipient's Email:</label>
+        <input type="email" id="recipientEmail" name="recipientEmail" required>
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        
+         <label for="image">Attach an Image:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+        
+        <button type="submit">Send Invitation</button>
+    </form>
+</body>
+</html>
