@@ -10,4 +10,3 @@ Teja Vaishnavi Godavarthi - 11712897</br>
 Bandaru Sai Sri Surya -11659350</br>
 Sreeja Ulligadda - 11721337</br>
 
-note : Will be changing the project name from Wedz to WedThing(as it is more eye catchy)
