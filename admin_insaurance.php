@@ -13,7 +13,7 @@ if(!isset($admin_id)){
 
 if(isset($_GET['delete'])){
    $delete_id = $_GET['delete'];
-   mysqli_query($conn, "DELETE FROM `insurance_purchases` WHERE id = '$delete_id'") or die('query failed');
+   mysqli_query($conn, "DELETE FROM `getinsaurance` WHERE id = '$delete_id'") or die('query failed');
    header('location:admin_insaurance.php');
 }
 
@@ -46,16 +46,16 @@ if(isset($_GET['delete'])){
 
       <?php
       
-      $select_orders = mysqli_query($conn, "SELECT * FROM `insurance_purchases`") or die('query failed');
+      $select_orders = mysqli_query($conn, "SELECT * FROM `getinsaurance`") or die('query failed');
       if(mysqli_num_rows($select_orders) > 0){
          while($fetch_orders = mysqli_fetch_assoc($select_orders)){
       ?>
       <div class="box">
          <p> user id : <span><?php echo $fetch_orders['user_id']; ?></span> </p>
          
-         <p> name : <span><?php echo $fetch_orders['plan_name']; ?></span> </p>
-         <p> price : <span><?php echo $fetch_orders['price']; ?></span> </p>
-         
+         <p> name : <span><?php echo $fetch_orders['name']; ?></span> </p>
+         <p> your orders : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
+           <p> total price : <span>$<?php echo $fetch_orders['total_price']; ?>/-</span> </p>
         
          <form action="" method="post">
             <input type="hidden" name="order_id" value="<?php echo $fetch_orders['id']; ?>">

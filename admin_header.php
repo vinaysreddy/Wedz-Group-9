@@ -15,16 +15,18 @@ if(isset($message)){
 
    <div class="flex">
 
-      <a href="admin_page.php" class="logo">Manage<span>Wedz</span></a>
+      <a href="admin_page.php" class="logo">Wedz Admin<span>Panel</span></a>
 
       <nav class="navbar">
-         <a href="admin_page.php">Home</a>
-         <a href="admin_products.php">Products</a>
+         <a href="admin_page.php">home</a>
+         <a href="admin_products.php">products</a>
          
-         <a href="admin_orders.php">Orders</a>
-         <a href="admin_insaurance.php">Insurance</a>
-         <a href="admin_users.php">Users</a>
-         <a href="admin_contacts.php">Feedback</a>
+         <a href="admin_orders.php">orders</a>
+         <a href="admin_insaurance.php">insaurance</a>
+         <a href="admin_insaurance_add.php">add insaurance</a>
+
+         <a href="admin_users.php">users</a>
+         <a href="admin_contacts.php">messages</a>
       </nav>
 
       <div class="icons">
